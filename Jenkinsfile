@@ -1,7 +1,5 @@
 pipeline {
-  agent { 
-    any
-  }
+  agent any;
 stages {
   stage('Build') {
   steps {
@@ -10,7 +8,9 @@ stages {
   }
   }
   stage('Test') {
+    steps {
   sh 'bash test.sh'
+  }
   }
 }
 }
